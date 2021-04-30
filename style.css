@@ -65,7 +65,10 @@ main {
 .column-right {
     border: 2px solid seashell;
     display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1px;
     grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(20, auto);
 }
 .row2 {
     display: flex;
