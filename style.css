@@ -96,4 +96,9 @@ main {
 .show-symbol {
     font-size: 10em;
     padding-bottom: 0.2em;
+    transition: opacity 6s;
+    will-change: opacity;
+}
+.show-symbol.faded-out {
+    opacity: 0;
 }

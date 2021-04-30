@@ -1,8 +1,14 @@
 const columnRight = document.querySelector('.column-right');
 const magicBall = document.querySelector('.magic-ball');
 
+
 function showSymbol() {
-   const showSymbol = magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
+   magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
+   const show = document.querySelector('.show-symbol');
+   show.classList.add("show-symbol","faded-out");
+   requestAnimationFrame(() => {
+    show.classList.remove("faded-out")
+  })
 }
 
 magicBall.addEventListener("click", showSymbol);
