@@ -8,6 +8,9 @@ function showSymbol() {
    show.classList.add("show-symbol","faded-out");
    requestAnimationFrame(() => {
     show.classList.remove("faded-out")
+    columnRight.innerText = "Can't believe it? Click the button to try again."
+    // TODO add button to replay
+    // add the text as a modal
     
   })
 }

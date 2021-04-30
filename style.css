@@ -78,7 +78,7 @@ main {
     width: 20em;
     height: 20em;
     background: radial-gradient(circle at 80px 80px, #5cabff, #000);
-    border: 2px solid rgb(227, 223, 255);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 50%;
     display: flex;
     justify-content: center;
