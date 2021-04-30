@@ -1,4 +1,11 @@
 const columnRight = document.querySelector('.column-right');
+const magicBall = document.querySelector('.magic-ball');
+
+function showSymbol() {
+   const showSymbol = magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
+}
+
+magicBall.addEventListener("click", showSymbol);
 
 const array = ["🐻", "🐼", "🐿️", "🐹", "🦝", "🐪", "🐨", "🐙", "🕷️"];
 const symbol = array[Math.floor(Math.random() * array.length)];
@@ -14,7 +21,9 @@ for (let i = 99; i >= 0; i--) {
         card.innerText = `${i} ${symbol} `;
     } else {
         card.innerText = `${i} ${array[Math.floor(Math.random() * array.length)]} `;
-
+    }
+    if (i < 10) {
+        card.style.textAlign = "center"
     }
     columnRight.append(card);
 }
