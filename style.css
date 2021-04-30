@@ -64,6 +64,8 @@ main {
 }
 .column-right {
     border: 2px solid seashell;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
 }
 .row2 {
     display: flex;
@@ -80,4 +82,7 @@ main {
   );
   border: 5px solid slateblue;
     border-radius: 50%;
+}
+.cards {
+    background-color: rgb(151, 169, 184);
 }
