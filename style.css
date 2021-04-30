@@ -77,13 +77,8 @@ main {
 .magic-ball {
     width: 20em;
     height: 20em;
-    background-color: slateblue;
-    background: linear-gradient(
-    to right bottom,
-    rgba(106, 90, 205, 1),
-    rgba(106, 90, 205, 0.05)
-  );
-  border: 5px solid slateblue;
+    background: radial-gradient(circle at 80px 80px, #5cabff, #000);
+    border: 2px solid rgb(227, 223, 255);
     border-radius: 50%;
     display: flex;
     justify-content: center;

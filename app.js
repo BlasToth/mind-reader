@@ -8,6 +8,7 @@ function showSymbol() {
    show.classList.add("show-symbol","faded-out");
    requestAnimationFrame(() => {
     show.classList.remove("faded-out")
+    
   })
 }
 
