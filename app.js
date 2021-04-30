@@ -11,6 +11,7 @@ function showSymbol() {
     columnRight.innerText = "Can't believe it? Click the button to try again."
     // TODO add button to replay
     // add the text as a modal
+    // add shadow to the sphere
     
   })
 }
