@@ -9,6 +9,11 @@ function showSymbol() {
    requestAnimationFrame(() => {
     show.classList.remove("faded-out")
     columnRight.innerText = "Can't believe it? Click the button to try again."
+    const restartButton = document.createElement("button");
+    restartButton.innerText = "Try Again";
+    restartButton.classList.add("restart-button");
+    columnRight.append(restartButton)
+    restartButton.addEventListener("click", () => {window.location.reload()})
     // TODO add button to replay
     // add the text as a modal
     // add shadow to the sphere
