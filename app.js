@@ -6,10 +6,23 @@ const buttonHungarian = document.querySelector('.button-hungarian');
 const titleEnglish = document.querySelectorAll('.english');
 const titleSpanish = document.querySelectorAll('.spanish');
 const titleHungarian = document.querySelectorAll('.hungarian');
+const langs = document.querySelectorAll('div [lang]');
+console.log(langs)
 
 
-buttonSpanish.addEventListener("click", langHandlerSp);
-buttonEnglish.addEventListener("click", langHandlerEn);
+
+function toggleLang(value) {
+    const currentLang = document.getElementsByClassName(value);
+    for (let i = 0; i < langs.length; i++) {
+        let splitArr = langs.split(".");
+        console.log(splitArr)
+        
+    }
+    
+    
+}
+buttonSpanish.onclick = toggleLang("spanish");
+// buttonEnglish.onclick = toggleLang("english");
 
 function langHandlerSp() {
     for (let i = 0; i < titleEnglish.length; i++) {
