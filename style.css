@@ -79,6 +79,7 @@ main {
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(20, auto);
     color: #565557;
+    min-width: 260px;
 }
 .row1 {
     font-size: 1.8em;

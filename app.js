@@ -8,14 +8,15 @@ function showSymbol() {
    show.classList.add("show-symbol","faded-out");
    requestAnimationFrame(() => {
     show.classList.remove("faded-out")
-    columnRight.innerHTML = `<p class="restart-message">Can't believe it? Click the button to try again.</p>`;
-    const restartButton = document.createElement("button");
-    restartButton.innerText = "Try Again";
-    restartButton.classList.add("restart-button");
-    columnRight.append(restartButton)
-    restartButton.addEventListener("click", () => {window.location.reload()})
-    // TODO add button to replay
-    // add the text as a modal
+    setTimeout(function(){
+        columnRight.innerHTML = `<p class="restart-message">Can't believe it? Click the button to try again.</p>`;
+        const restartButton = document.createElement("button");
+        restartButton.innerText = "Try Again";
+        restartButton.classList.add("restart-button");
+        columnRight.append(restartButton)
+        restartButton.addEventListener("click", () => {window.location.reload()})
+    }, 2300);
+    // TODO 
     // add shadow to the sphere
     
   })
