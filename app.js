@@ -1,6 +1,17 @@
 const columnRight = document.querySelector('.column-right');
 const magicBall = document.querySelector('.magic-ball');
+const buttonSpanish = document.querySelector('.button-spanish');
+const titleEnglish = document.querySelector('.english');
+const titleSpanish = document.querySelector('.spanish');
+console.log(titleEnglish, titleSpanish)
 
+
+buttonSpanish.addEventListener("click", langHandler);
+
+function langHandler() {
+    titleEnglish.classList.add("not-visible");
+    titleSpanish.classList.add("visible");
+}
 
 function showSymbol() {
    magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
