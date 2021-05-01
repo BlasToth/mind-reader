@@ -168,4 +168,8 @@ main {
 .visible {
     display: block;
 }
+.flag {
+    display: flex;
+    flex-direction: column;
+}
 

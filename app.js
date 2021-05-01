@@ -1,13 +1,17 @@
 const columnRight = document.querySelector('.column-right');
 const magicBall = document.querySelector('.magic-ball');
 const buttonSpanish = document.querySelector('.button-spanish');
+const buttonEnglish = document.querySelector('.button-english');
+const buttonHungarian = document.querySelector('.button-hungarian');
 const titleEnglish = document.querySelectorAll('.english');
 const titleSpanish = document.querySelectorAll('.spanish');
+const titleHungarian = document.querySelectorAll('.hungarian');
 
 
-buttonSpanish.addEventListener("click", langHandler);
+buttonSpanish.addEventListener("click", langHandlerSp);
+buttonEnglish.addEventListener("click", langHandlerEn);
 
-function langHandler() {
+function langHandlerSp() {
     for (let i = 0; i < titleEnglish.length; i++) {
         titleEnglish[i].classList.remove("visible");
         titleEnglish[i].classList.add("not-visible");
@@ -16,6 +20,16 @@ function langHandler() {
         titleSpanish[j].classList.add("visible");
     }
 }
+function langHandlerEn() {
+    for (let i = 0; i < titleSpanish.length; i++) {
+        titleSpanish[i].classList.remove("visible");
+        titleSpanish[i].classList.add("not-visible");
+    }
+    for (let j = 0; j <titleEnglish.length; j++) {
+        titleEnglish[j].classList.add("visible");
+    }
+}
+
 
 function showSymbol() {
    magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
