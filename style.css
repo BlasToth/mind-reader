@@ -88,6 +88,10 @@ main {
     display: flex;
     justify-content: center;
 }
+.row3 {
+    font-size: 1em;
+    text-align: justify;
+}
 .magic-ball {
     margin: 10px 0;
     width: 20em;
@@ -142,4 +146,8 @@ main {
 }
 .restart-button:hover {
     background-position: right center; 
+}
+.stand-out-line {
+    padding: 5px 0;
+    text-align: center;
 }
