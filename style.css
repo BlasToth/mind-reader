@@ -162,13 +162,10 @@ main {
     padding: 5px 0;
     text-align: center;
 }
-.hungarian, .russian, .spanish {
+.not-visible {
     display: none;
 }
 .visible {
     display: block;
-}
-.not-visible {
-    display: none;
 }
 

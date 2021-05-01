@@ -1,16 +1,20 @@
 const columnRight = document.querySelector('.column-right');
 const magicBall = document.querySelector('.magic-ball');
 const buttonSpanish = document.querySelector('.button-spanish');
-const titleEnglish = document.querySelector('.english');
-const titleSpanish = document.querySelector('.spanish');
-console.log(titleEnglish, titleSpanish)
+const titleEnglish = document.querySelectorAll('.english');
+const titleSpanish = document.querySelectorAll('.spanish');
 
 
 buttonSpanish.addEventListener("click", langHandler);
 
 function langHandler() {
-    titleEnglish.classList.add("not-visible");
-    titleSpanish.classList.add("visible");
+    for (let i = 0; i < titleEnglish.length; i++) {
+        titleEnglish[i].classList.remove("visible");
+        titleEnglish[i].classList.add("not-visible");
+    }
+    for (let j = 0; j <titleSpanish.length; j++) {
+        titleSpanish[j].classList.add("visible");
+    }
 }
 
 function showSymbol() {
