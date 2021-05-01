@@ -118,6 +118,11 @@ main {
     font-size: 1.6em;
     text-align: center;
     padding-top: 38%;
+    transition: opacity 3s;
+    will-change: opacity;
+}
+.restart-message.faded-out {
+    opacity: 0;
 }
 .restart-button {
     margin: 10px auto;
@@ -137,6 +142,11 @@ main {
     cursor: pointer;
     display: inline-block;
     border-radius: 25px;
+    transition: opacity 3s;
+    will-change: opacity;
+}
+.restart-button.faded-out {
+    opacity: 0;
 }
 .restart-button:hover{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
