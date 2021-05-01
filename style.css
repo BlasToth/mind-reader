@@ -95,8 +95,8 @@ main {
 }
 .magic-ball {
     margin: 10px 0;
-    width: 20em;
-    height: 20em;
+    width: 18em;
+    height: 18em;
     background: radial-gradient(circle at 80px 80px, #62f4f8, #000);
     border-radius: 50%;
     display: flex;
