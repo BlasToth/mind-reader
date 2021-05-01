@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +8,18 @@
 
 main {
   min-height: 100vh;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  background: linear-gradient(to right top, #65df94, #6ccaeb);
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .glass {
   background: white;
   min-height: 90vh;
+  max-width: 800px;
+  min-width: 700px;
   width: 90%;
   background: linear-gradient(
     to right bottom,
@@ -49,45 +54,52 @@ main {
 
 .grid-container {
     display: grid;
-    background-color: rgb(190, 221, 190);
     grid-template-columns: 60% 40%;
     grid-template-rows: auto auto auto;
-    padding: 2em;
-    margin: 2em;
+    padding: 1em;
+    margin: 1.4em;
 }
 
 .column-left {
     display: grid;
-    border: 2px solid salmon;
     grid-template-rows: auto auto auto;
-    text-align: center;
+    text-align: justify;
+    margin-right: 10px;
+    color: #565557;
 }
 .column-right {
+    background-color: rgb(151 169 184 / 25%);
     border: 2px solid seashell;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
     display: grid;
     grid-auto-flow: column;
-    grid-gap: 1px;
     grid-template-columns: repeat(5, auto);
     grid-template-rows: repeat(20, auto);
+    color: #565557;
+}
+.row1 {
+    font-size: 1.8em;
+    text-align: center;
 }
 .row2 {
     display: flex;
     justify-content: center;
 }
 .magic-ball {
+    margin: 10px 0;
     width: 20em;
     height: 20em;
-    background: radial-gradient(circle at 80px 80px, #5cabff, #000);
-    border: 2px solid rgb(255, 255, 255);
+    background: radial-gradient(circle at 80px 80px, #62f4f8, #000);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
-.cards {
-    background-color: rgb(151, 169, 184);
-}
+
 .show-symbol {
     font-size: 10em;
     padding-bottom: 0.2em;
@@ -97,7 +109,37 @@ main {
 .show-symbol.faded-out {
     opacity: 0;
 }
+.restart-message {
+    font-size: 1.6em;
+    text-align: center;
+    padding-top: 38%;
+}
 .restart-button {
-    background-color: cornflowerblue;
-    width: 100px;
+    margin: 10px auto;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+.restart-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 10px auto;
+}
+.restart-button {
+    background-image: linear-gradient(to right, #2BC0E4 0%, #66df98 51%, #6ccbe8 100%);
+}
+.restart-button:hover {
+    background-position: right center; 
 }

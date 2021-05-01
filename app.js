@@ -8,7 +8,7 @@ function showSymbol() {
    show.classList.add("show-symbol","faded-out");
    requestAnimationFrame(() => {
     show.classList.remove("faded-out")
-    columnRight.innerText = "Can't believe it? Click the button to try again."
+    columnRight.innerHTML = `<p class="restart-message">Can't believe it? Click the button to try again.</p>`;
     const restartButton = document.createElement("button");
     restartButton.innerText = "Try Again";
     restartButton.classList.add("restart-button");
