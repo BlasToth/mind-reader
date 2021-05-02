@@ -42,6 +42,7 @@ main {
   height: 12rem;
   width: 12rem;
   position: absolute;
+  z-index: 1;
 }
 .circle1 {
     top: 5%;
@@ -176,6 +177,7 @@ main {
     font-weight: 700;
     border: 2px solid #ffffffcc;
     margin-bottom: 4px;
+    z-index: 2;
 }
 .active {
     background-color: #5191bbe3;

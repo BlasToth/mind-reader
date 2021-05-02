@@ -68,23 +68,23 @@ function deleteActive() {
         allLangButtons[i].classList.remove('active');
     }
 }
-
+const navLang = navigator.language || navigator.userLanguage; 
 const locLang = localStorage.getItem('currLang');
-locLang ? currentLanguage = `${locLang}` : currentLanguage = "en";
+locLang ? currentLanguage = `${locLang}` : currentLanguage = navLang || "en";
 
-if (locLang === "en") {
+if (currentLanguage === "en") {
     toggleLangEn();
     deleteActive();
     buttonEnglish.classList.add("active")
-}else if (locLang === "es") {
+}else if (currentLanguage === "es") {
     toggleLangSp();
     deleteActive();
     buttonSpanish.classList.add("active")
-}else if (locLang === "hu") {
+}else if (currentLanguage === "hu") {
     toggleLangHu();
     deleteActive();
     buttonHungarian.classList.add("active")
-}else if (locLang === "ru") {
+}else if (currentLanguage === "ru") {
     toggleLangRu();
     deleteActive();
     buttonRussian.classList.add("active")
