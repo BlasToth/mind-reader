@@ -14,7 +14,7 @@ const task = document.querySelectorAll('.title')[1];
 const titleStringSpanish = "Lector de pensamiento";
 const titleStringEnglish = "The NOT flash mind reader";
 const titleStringHungarian = "A nagy gondolatolvasó";
-const titleStringRussian = "Виртуальный угадыватель мыслей";
+const titleStringRussian = "магический шар онлайн";
 
 const taskStringSpanish = `<p>Piensa un número cualquiera de dos cifras y suma ambos digitos.
 Después resta el resultado de la suma del número que pensaste.</p>
@@ -43,15 +43,14 @@ Ezt követően vond ki a gondolt számból a számjegyek összegét!</p>
 <p>Ha megvan az eredmény, keresd ki a táblázatból a számot és a mellette 
 található állatkát! Koncentrálj erősen a képre és ha megvan, kattints 
 a varázsgömbre és lássuk!</p>`;
-const taskStringRussian = `<p>Загадайте любое двузначное число
-Сложите цифры из которых это число состоит
+const taskStringRussian = `<p>Загадайте любое двузначное число.
+Сложите цифры из которых это число состоит. 
 Вычтите результат из числа которое вы загадали</p>
 
 <p class="stand-out-line">Например: 42 (4 + 2 = 6) так 42 - 6 = 36</p>
 
 <p>Найдите это число в таблице. И картинку которая ему соответствует.
-Представьте эту картинку в своем воображении. Затем нажмите на волшебный шар.
-В нем появится этот значок.</p>`;
+Представьте эту картинку в своем воображении. Затем нажмите на волшебный шар. В нем появится этот значок.</p>`;
 
 const restartMsgEng = "Can't believe it? Click the button to try again.";
 const restartMsgSpa = "No te lo crees? Haz click para hacerlo nuevo.";
@@ -63,27 +62,43 @@ const tryEsp = "Otra vez";
 const tryHun = "Még egyszer";
 const tryRus = "Еще раз";
 
-let currentLanguage = "en";
+const locLang = localStorage.getItem('currLang');
+locLang ? currentLanguage = `${locLang}` : currentLanguage = "en";
+console.log(locLang)
+if (locLang === "en") {
+    toggleLangEn();
+}else if (locLang === "es") {
+    toggleLangSp();
+}else if (locLang === "hu") {
+    toggleLangHu();
+}else if (locLang === "ru") {
+    toggleLangRu();
+}
+
 
 function toggleLangSp() {
     title.innerText = titleStringSpanish;
     task.innerHTML = taskStringSpanish;
-    currentLanguage = "es";   
+    currentLanguage = "es";
+    localStorage.setItem('currLang', 'es'); 
 }
 function toggleLangEn() {
     title.innerText = titleStringEnglish;
     task.innerHTML = taskStringEnglish;
-    currentLanguage = "en";    
+    currentLanguage = "en";
+    localStorage.setItem('currLang', 'en');    
 }
 function toggleLangHu() {
     title.innerText = titleStringHungarian;
     task.innerHTML = taskStringHungarian;
-    currentLanguage = "hu";   
+    currentLanguage = "hu";
+    localStorage.setItem('currLang', 'hu');  
 }
 function toggleLangRu() {
     title.innerText = titleStringRussian;
     task.innerHTML = taskStringRussian;
-    currentLanguage = "ru";   
+    currentLanguage = "ru";
+    localStorage.setItem('currLang', 'ru');  
 }
 
 buttonSpanish.onclick = toggleLangSp;
