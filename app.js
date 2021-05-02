@@ -3,6 +3,7 @@ const magicBall = document.querySelector('.magic-ball');
 const buttonSpanish = document.querySelector('.button-spanish');
 const buttonEnglish = document.querySelector('.button-english');
 const buttonHungarian = document.querySelector('.button-hungarian');
+const buttonRussian = document.querySelector('.button-russian');
 const titleEnglish = document.querySelectorAll('.english');
 const titleSpanish = document.querySelectorAll('.spanish');
 const titleHungarian = document.querySelectorAll('.hungarian');
@@ -13,6 +14,8 @@ const task = document.querySelectorAll('.title')[1];
 const titleStringSpanish = "Lector de pensamiento";
 const titleStringEnglish = "The NOT flash mind reader";
 const titleStringHungarian = "A nagy gondolatolvasó";
+const titleStringRussian = "Виртуальный угадыватель мыслей";
+
 const taskStringSpanish = `<p>Piensa un número cualquiera de dos cifras y suma ambos digitos.
 Después resta el resultado de la suma del número que pensaste.</p>
 
@@ -39,31 +42,71 @@ Ezt követően vond ki a gondolt számból a számjegyek összegét!</p>
 
 <p>Ha megvan az eredmény, keresd ki a táblázatból a számot és a mellette 
 található állatkát! Koncentrálj erősen a képre és ha megvan, kattints 
-a varázsgömbre!</p>`;
+a varázsgömbre és lássuk!</p>`;
+const taskStringRussian = `<p>Загадайте любое двузначное число
+Сложите цифры из которых это число состоит
+Вычтите результат из числа которое вы загадали</p>
 
+<p class="stand-out-line">Например: 42 (4 + 2 = 6) так 42 - 6 = 36</p>
 
+<p>Найдите это число в таблице. И картинку которая ему соответствует.
+Представьте эту картинку в своем воображении. Затем нажмите на волшебный шар.
+В нем появится этот значок.</p>`;
+
+const restartMsgEng = "Can't believe it? Click the button to try again.";
+const restartMsgSpa = "No te lo crees? Haz click para hacerlo nuevo.";
+const restartMsgHun = "Nem hiszed el? Kattints a gombra és próbáld meg újra!";
+const restartMsgRus = "Не можете в это поверить? Нажмите кнопку, чтобы повторить попытку.";
+
+const tryEng = "Try Again";
+const tryEsp = "Otra vez";
+const tryHun = "Még egyszer";
+const tryRus = "Еще раз";
+
+let currentLanguage = "en";
 
 function toggleLangSp() {
     title.innerText = titleStringSpanish;
     task.innerHTML = taskStringSpanish;
-      
+    currentLanguage = "es";   
 }
 function toggleLangEn() {
     title.innerText = titleStringEnglish;
     task.innerHTML = taskStringEnglish;
-      
+    currentLanguage = "en";    
 }
 function toggleLangHu() {
     title.innerText = titleStringHungarian;
     task.innerHTML = taskStringHungarian;
-      
+    currentLanguage = "hu";   
+}
+function toggleLangRu() {
+    title.innerText = titleStringRussian;
+    task.innerHTML = taskStringRussian;
+    currentLanguage = "ru";   
 }
 
 buttonSpanish.onclick = toggleLangSp;
 buttonEnglish.onclick = toggleLangEn;
 buttonHungarian.onclick = toggleLangHu;
+buttonRussian.onclick = toggleLangRu;
 
-
+function messageHandler(msg, btnTxt) {
+    columnRight.innerHTML = `<p class="restart-message">${msg}</p>`;
+    const restartButton = document.createElement("button");
+    restartButton.innerText = btnTxt;
+    restartButton.classList.add("restart-button");
+    columnRight.append(restartButton)
+    restartButton.addEventListener("click", () => {window.location.reload()})
+    const showRestartButton = document.querySelector(".restart-button");
+    showRestartButton.classList.add("restart-button", "faded-out");
+    const showRestartMessage = document.querySelector(".restart-message");
+    showRestartMessage.classList.add("restart-message", "faded-out");
+    requestAnimationFrame(() => {
+        showRestartButton.classList.remove("faded-out");
+        showRestartMessage.classList.remove("faded-out");
+    })
+}
 
 function showSymbol() {
    magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
@@ -72,20 +115,15 @@ function showSymbol() {
    requestAnimationFrame(() => {
     show.classList.remove("faded-out");
     setTimeout(function(){
-        columnRight.innerHTML = `<p class="restart-message">Can't believe it? Click the button to try again.</p>`;
-        const restartButton = document.createElement("button");
-        restartButton.innerText = "Try Again";
-        restartButton.classList.add("restart-button");
-        columnRight.append(restartButton)
-        restartButton.addEventListener("click", () => {window.location.reload()})
-        const showRestartButton = document.querySelector(".restart-button");
-        showRestartButton.classList.add("restart-button", "faded-out");
-        const showRestartMessage = document.querySelector(".restart-message");
-        showRestartMessage.classList.add("restart-message", "faded-out");
-        requestAnimationFrame(() => {
-            showRestartButton.classList.remove("faded-out");
-            showRestartMessage.classList.remove("faded-out");
-        })
+        if (currentLanguage === "en") {
+            messageHandler(restartMsgEng, tryEng);
+        } else if (currentLanguage === "es") {
+            messageHandler(restartMsgSpa, tryEsp);
+        } else if (currentLanguage === "hu") {
+            messageHandler(restartMsgHun, tryHun);
+        } else {
+            messageHandler(restartMsgRus, tryRus);
+        }
     }, 1223);
     // TODO 
     // add shadow to the sphere
