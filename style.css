@@ -167,9 +167,25 @@ main {
     flex-direction: column;
 }
 .lang-button {
-    background-color: #72e2b2;
+    background-color: #49cb94;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    padding: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: 2px solid #ffffffcc;
+    margin-bottom: 4px;
+}
+.active {
+    background-color: #5191bbe3;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: 2px solid #ffffffcc;
+    margin-bottom: 4px;
 }
 

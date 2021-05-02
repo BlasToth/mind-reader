@@ -4,6 +4,7 @@ const buttonSpanish = document.querySelector('.button-spanish');
 const buttonEnglish = document.querySelector('.button-english');
 const buttonHungarian = document.querySelector('.button-hungarian');
 const buttonRussian = document.querySelector('.button-russian');
+const allLangButtons = document.querySelectorAll('.lang-button')
 const titleEnglish = document.querySelectorAll('.english');
 const titleSpanish = document.querySelectorAll('.spanish');
 const titleHungarian = document.querySelectorAll('.hungarian');
@@ -62,17 +63,31 @@ const tryEsp = "Otra vez";
 const tryHun = "Még egyszer";
 const tryRus = "Еще раз";
 
+function deleteActive() {
+    for (let i = 0; i < allLangButtons.length; i++) {
+        allLangButtons[i].classList.remove('active');
+    }
+}
+
 const locLang = localStorage.getItem('currLang');
 locLang ? currentLanguage = `${locLang}` : currentLanguage = "en";
-console.log(locLang)
+
 if (locLang === "en") {
     toggleLangEn();
+    deleteActive();
+    buttonEnglish.classList.add("active")
 }else if (locLang === "es") {
     toggleLangSp();
+    deleteActive();
+    buttonSpanish.classList.add("active")
 }else if (locLang === "hu") {
     toggleLangHu();
+    deleteActive();
+    buttonHungarian.classList.add("active")
 }else if (locLang === "ru") {
     toggleLangRu();
+    deleteActive();
+    buttonRussian.classList.add("active")
 }
 
 
@@ -81,24 +96,32 @@ function toggleLangSp() {
     task.innerHTML = taskStringSpanish;
     currentLanguage = "es";
     localStorage.setItem('currLang', 'es'); 
+    deleteActive();
+    buttonSpanish.classList.add("active");
 }
 function toggleLangEn() {
     title.innerText = titleStringEnglish;
     task.innerHTML = taskStringEnglish;
     currentLanguage = "en";
-    localStorage.setItem('currLang', 'en');    
+    localStorage.setItem('currLang', 'en'); 
+    deleteActive();
+    buttonEnglish.classList.add("active");  
 }
 function toggleLangHu() {
     title.innerText = titleStringHungarian;
     task.innerHTML = taskStringHungarian;
     currentLanguage = "hu";
-    localStorage.setItem('currLang', 'hu');  
+    localStorage.setItem('currLang', 'hu');
+    deleteActive();
+    buttonHungarian.classList.add("active");  
 }
 function toggleLangRu() {
     title.innerText = titleStringRussian;
     task.innerHTML = taskStringRussian;
     currentLanguage = "ru";
-    localStorage.setItem('currLang', 'ru');  
+    localStorage.setItem('currLang', 'ru');
+    deleteActive();
+    buttonRussian.classList.add("active");  
 }
 
 buttonSpanish.onclick = toggleLangSp;
