@@ -162,14 +162,14 @@ main {
     padding: 5px 0;
     text-align: center;
 }
-.not-visible {
-    display: none;
-}
-.visible {
-    display: block;
-}
 .flag {
     display: flex;
     flex-direction: column;
+}
+.lang-button {
+    background-color: #72e2b2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
 }
 
