@@ -73,8 +73,6 @@
         border: 2px solid seashell;
         border-radius: 15px;
         padding: 5px;
-        padding-left: 10px;
-        margin-left: 10px;
         display: grid;
         grid-auto-flow: column;
         grid-template-columns: repeat(5, auto);
