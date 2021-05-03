@@ -5,9 +5,8 @@ Ezt követően vond ki a gondolt számból a számjegyek összegét!</p>
 
 <p class="stand-out-line">Például: 42 (4 + 2 = 6) szóval 42 - 6 = 36</p>
 
-<p>Ha megvan az eredmény, keresd ki a táblázatból a számot és a mellette 
-található állatkát! Koncentrálj erősen a képre és ha megvan, kattints 
-a varázsgömbre és lássuk!</p>`;
+<p>Az eredmény alapján keresd ki a táblázatból a képet! Koncentrálj erősen és ha megvan, kattints 
+a varázsgömbre. Megmutatjuk mire gondoltál!</p>`;
 
 const restartMsgHun = "Nem hiszed el? Kattints a gombra és próbáld meg újra!";
 
