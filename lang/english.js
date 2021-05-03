@@ -6,7 +6,7 @@ and then subtract the total from your original number.
 
 <p class="stand-out-line">For example: 42 (4 + 2 = 6) so 42 - 6 = 36</p>
 
-<p class="description">When you have the final number look at the chart
+<p>When you have the final number look at the chart
 and find the relevant picture. Concentrate on the animal
 and when you have it clearly in your mind click on the
 crystal ball and it will show you the animal you are
