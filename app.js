@@ -5,10 +5,7 @@ const buttonEnglish = document.querySelector('.button-english');
 const buttonHungarian = document.querySelector('.button-hungarian');
 const buttonRussian = document.querySelector('.button-russian');
 const allLangButtons = document.querySelectorAll('.lang-button')
-const titleEnglish = document.querySelectorAll('.english');
-const titleSpanish = document.querySelectorAll('.spanish');
-const titleHungarian = document.querySelectorAll('.hungarian');
-const langs = document.querySelectorAll('div [lang]');
+
 const title = document.querySelector('.title');
 const task = document.querySelectorAll('.title')[1];
 
