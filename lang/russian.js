@@ -1,4 +1,4 @@
-const titleStringRussian = "магический шар онлайн";
+const titleStringRussian = "Магический шар онлайн";
 
 const taskStringRussian = `<p>Загадайте любое двузначное число.
 Сложите цифры из которых это число состоит. 
