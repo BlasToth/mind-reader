@@ -8,6 +8,7 @@
 
 main {
   min-height: 100vh;
+  min-width: 800px;
   background: linear-gradient(to right top, #65df94, #6ccaeb);
   display: flex;
   justify-content: center;

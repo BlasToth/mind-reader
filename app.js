@@ -117,7 +117,7 @@ function showSymbol() {
 
 magicBall.addEventListener("click", showSymbol);
 
-const array = ["🐻", "🐼", "🐿️", "🐹", "🦝", "🐪", "🐨", "🐙", "🕷️"];
+const array = ["🐻", "🐼", "🐿️", "🐹", "🦝", "🐪", "🐨", "🐙", "🕷️", "🐘", "🦔"];
 const symbol = array[Math.floor(Math.random() * array.length)];
 const symbolIndex = array.indexOf(symbol);
 const arrayRest = array.splice(symbolIndex, 1);
