@@ -131,8 +131,5 @@ for (let i = 99; i >= 0; i--) {
   } else {
     card.innerText = `${i} ${array[Math.floor(Math.random() * array.length)]} `;
   }
-  if (i < 10) {
-    card.style.textAlign = "center";
-  }
   columnRight.append(card);
 }
