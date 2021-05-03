@@ -5,7 +5,7 @@ Después resta el resultado de la suma del número que pensaste.</p>
 
 <p class="stand-out-line">Por ejemplo: 42 (4 + 2 = 6) así 42 - 6 = 36</p>
 
-<p>Cuando tengas el número final búscalo en la tabla de números y
+<p class="description">Cuando tengas el número final búscalo en la tabla de números y
 fíjate en el animal que aperece a su lado. Concéntrate en el animal,
 y cuando lo veas con claridad en tu mente, haz click en la bola
 mágica.</p>`;

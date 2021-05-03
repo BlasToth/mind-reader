@@ -54,6 +54,7 @@
     .title {
         font-weight: 600;
         margin: 1em 0;
+        height: 30px;
     }
     
     .grid-container {
@@ -200,6 +201,9 @@
     }
     .cards {
         text-align: center;
+    }
+    .description {
+        height: 50px;
     }
   }
 
@@ -391,6 +395,9 @@
     }
     .cards {
         text-align: center;
+    }
+    .description {
+        height: 50px;
     }
   }
 
