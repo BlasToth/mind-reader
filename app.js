@@ -8,6 +8,7 @@ const allLangButtons = document.querySelectorAll(".lang-button");
 
 const title = document.querySelector(".title");
 const task = document.querySelectorAll(".title")[1];
+let magicBallClicked = false;
 
 function deleteActive() {
   for (let i = 0; i < allLangButtons.length; i++) {
@@ -45,6 +46,9 @@ function toggleLangSp() {
   localStorage.setItem("currLang", "es");
   deleteActive();
   buttonSpanish.classList.add("active");
+  if (magicBallClicked === true) {
+    messageHandler(restartMsgSpa, tryEsp);
+  }
 }
 function toggleLangEn() {
   title.innerText = titleStringEnglish;
@@ -53,6 +57,9 @@ function toggleLangEn() {
   localStorage.setItem("currLang", "en");
   deleteActive();
   buttonEnglish.classList.add("active");
+  if (magicBallClicked === true) {
+    messageHandler(restartMsgEng, tryEng);
+  }
 }
 function toggleLangHu() {
   title.innerText = titleStringHungarian;
@@ -61,6 +68,9 @@ function toggleLangHu() {
   localStorage.setItem("currLang", "hu");
   deleteActive();
   buttonHungarian.classList.add("active");
+  if (magicBallClicked === true) {
+    messageHandler(restartMsgHun, tryHun);
+  }
 }
 function toggleLangRu() {
   title.innerText = titleStringRussian;
@@ -69,6 +79,9 @@ function toggleLangRu() {
   localStorage.setItem("currLang", "ru");
   deleteActive();
   buttonRussian.classList.add("active");
+  if (magicBallClicked === true) {
+    messageHandler(restartMsgRus, tryRus);
+  }
 }
 
 buttonSpanish.onclick = toggleLangSp;
@@ -96,6 +109,7 @@ function messageHandler(msg, btnTxt) {
 }
 
 function showSymbol() {
+  magicBallClicked = true;
   magicBall.innerHTML = `<span class="show-symbol">${symbol}</span>`;
   const show = document.querySelector(".show-symbol");
   show.classList.add("show-symbol", "faded-out");
