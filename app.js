@@ -147,3 +147,7 @@ for (let i = 99; i >= 0; i--) {
   }
   columnRight.append(card);
 }
+
+console.log('%cWrite to me on LinkedIn', 'background-color:black;padding:15px;border-radius:10px;font-size:50px;text-align:center;color:red;text-shadow: 2px 3px white')
+
+console.log('%chttps://www.linkedin.com/in/balazs-laszlo-toth/', 'font-size:16px;font-weight:bolder;');
